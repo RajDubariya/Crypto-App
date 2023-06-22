@@ -17,12 +17,14 @@ const About = () => {
 
         <div className=" flex justify-center items-center text-center capitalize h-[50%] text-white">
           <div>
-            <p className=" text-5xl font-semibold">about coinSage</p>
-            <p className=" text-2xl py-3">
+            <p className=" md:text-5xl sm:text-4xl text-3xl font-semibold">
+              about coinSage
+            </p>
+            <p className=" md:text-2xl sm:text-lg text-base py-3">
               CoinSage is the simplest website to check prices of
               cryptocurrencies.
             </p>
-            <p className=" text-xl">start analysing crypto with us !!</p>
+            <p className=" md:text-xl text-sm">start analysing crypto with us !!</p>
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ import Banner from "./Banner";
 import { fetchCoinData } from "../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import CoinChart from "./CoinChart";
-import Navbar from './Navbar'
+import Navbar from "./Navbar";
 
 const CoinDetail = () => {
   const dispatch = useDispatch();
@@ -24,7 +24,7 @@ const CoinDetail = () => {
 
   return (
     <>
-    <Navbar/>
+      <Navbar />
       {selectedCoin ? (
         <CoinChart coin={selectedCoin} goBack={() => setSelectedCoin(null)} />
       ) : (
@@ -39,7 +39,10 @@ const CoinDetail = () => {
             </div>
           ) : (
             <div>
-              <div className=" w-[100%] font-medium flex items-center justify-between py-4 capitalize text-lg">
+              <div
+                className=" w-[100%] font-medium flex items-center justify-between md:py-4
+              py-2 capitalize md:text-lg text-sm"
+              >
                 <p className="text-center w-1/6">index</p>
                 <p className="text-center w-1/6">name</p>
                 <p className="text-center w-1/6">price</p>
@@ -53,7 +56,7 @@ const CoinDetail = () => {
                     coinData.map((coin) => (
                       <li
                         key={coin.uuid}
-                        className="border py-6 flex items-center justify-between"
+                        className="border md:py-6 sm:py-4 py-2 md:text-lg sm:text-base text-sm flex items-center justify-between"
                       >
                         <p className="text-center w-1/6">{coin.rank}</p>
 
@@ -64,10 +67,10 @@ const CoinDetail = () => {
                           <img
                             src={coin.iconUrl}
                             alt={coin.iconUrl}
-                            className="w-[22px] mr-2"
+                            className="md:w-[22px] w-[17px] mr-1"
                           />
                           <p>{coin.name}</p>
-                          <p className=" text-xs text-gray-400 ml-3">
+                          <p className="text-xs text-gray-400 ml-1">
                             {coin.symbol}
                           </p>
                         </div>

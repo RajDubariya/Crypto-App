@@ -35,7 +35,6 @@ export const fetchCoinData = () => {
       });
 
       const data = response.data.data.coins;
-      // console.log(data)
       dispatch(fetchCoinDataSuccess(data));
     } catch (error) {
       dispatch(fetchCoinDataFailure(error));

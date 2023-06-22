@@ -27,30 +27,30 @@ const CoinChart = ({ coin, goBack }) => {
   return (
     <>
       <div className=" w-screen flex items-center justify-center flex-col">
-        <div className="py-1 text-lg w-full  flex items-center justify-around capitalize mb-8 border-b-2 border-sky-600">
+        <div className="py-1 md:text-xl sm:text-lg text-xs  w-full  flex items-center justify-around capitalize mb-8 border-b-2 border-sky-600 text-center">
           <button onClick={goBack}>
-            <MdArrowBack size={25} />
+            <MdArrowBack size={20} className=" mr-2" />
           </button>
 
-          <div className="p-5 flex items-center justify-center text-xl ">
+          <div className="md:p-5 sm:p-2 p-1 flex items-center justify-center ">
             <img
               src={coin.iconUrl}
               alt={coin.iconUrl}
-              className="w-[30px] mr-2"
+              className="md:w-[30px] w-[20px] mr-1"
             />
             <p>{coin.name}</p>
-            <p className=" text-xs ml-1 text-gray-400 "> {coin.symbol}</p>
+            <p className="text-xs ml-1 text-gray-400 "> {coin.symbol}</p>
           </div>
 
-          <div className="p-5 ">
+          <div className="md:p-5 sm:p-2 p-1">
             current price : {formatPrice(coin.price)} $
           </div>
 
-          <div className="p-5 ">
+          <div className="md:p-5 sm:p-2 p-1 ">
             <p>listed at : {coin.listedAt} </p>
           </div>
 
-          <div className="p-5 ">change : {coin.change}</div>
+          <div className="md:p-5 sm:p-2 p-1 ">change : {coin.change}</div>
         </div>
 
         <Line
